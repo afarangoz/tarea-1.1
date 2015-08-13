@@ -2,6 +2,28 @@
 #include "calculadora.h"
 
 int main(void)
-{
+{int mt,a,b,r;
+
+ printf("CALCUADORA\n 1-Sumar\n 2-Restar\n 3-Multiplicar\n 4-Dividir");
+ scanf("%d",&mt);
+ switch (mt)
+  {
+	case 1: printf("ingrese los valores que desea sumar a b");
+		scanf("%d %d",&a,&b);
+		r=suma(a,b);
+		printf("resultado=%d",r);break;
+	case 2: printf("ingrese los valores que desea restar a b");
+		scanf("%d %d",&a,&b);
+		r=resta(a,b);
+		printf("resultado=%d",r);break;
+	case 3: printf("ingrese los valores que desea multiplicar a b");
+		scanf("%d %d",&a,&b);
+		r=multiplicacion(a,b);
+		printf("resultado=%d",r);break;
+	case 4: printf("ingrese los valores que desea dividir a b");
+		scanf("%d %d",&a,&b);
+		r=division(a,b);
+		printf("resultado=%d",r);break;
+  }
 return 0;
 }
