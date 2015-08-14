@@ -2,28 +2,33 @@
 #include "calculadora.h"
 
 int main(void)
-{int mt,a,b,r;
+{
+int opc,v1,v2,r, min, sus, dvn, dvs;
 
  printf("CALCUADORA\n 1-Sumar\n 2-Restar\n 3-Multiplicar\n 4-Dividir");
- scanf("%d",&mt);
- switch (mt)
+ scanf("%d",&opc);
+ switch (opc)
   {
-	case 1: printf("ingrese los valores que desea sumar a b");
-		scanf("%d %d",&a,&b);
-		r=suma(a,b);
-		printf("resultado=%d",r);break;
-	case 2: printf("ingrese los valores que desea restar a b");
-		scanf("%d %d",&a,&b);
-		r=resta(a,b);
-		printf("resultado=%d",r);break;
-	case 3: printf("ingrese los valores que desea multiplicar a b");
-		scanf("%d %d",&a,&b);
-		r=multiplicacion(a,b);
-		printf("resultado=%d",r);break;
-	case 4: printf("ingrese los valores que desea dividir a b");
-		scanf("%d %d",&a,&b);
-		r=division(a,b);
-		printf("resultado=%d",r);break;
+	case 1: printf("ingrese los valores que desea sumar valor_1 valor_2");
+		scanf("%d %d",&v1,&v2);
+		r=suma(v1,v2);
+		printf("resultado=%d",r);
+		break;
+	case 2: printf("ingrese los valores que desea restar minuendo sustraendo");
+		scanf("%d %d",&min,&sus);
+		r=resta(min,sus);
+		printf("resultado=%d",r);
+		break;
+	case 3: printf("ingrese los valores que desea multiplicar valor_1 valor_2");
+		scanf("%d %d",&v1,&v2);
+		r=multiplicacion(v1,v2);
+		printf("resultado=%d",r);
+		break;
+	case 4: printf("ingrese los valores que desea dividir dividendo divisor");
+		scanf("%d %d",&dvn,&dvs);
+		r=division(dvn,dvs);
+		printf("resultado=%d",r);
+		break;
   }
 return 0;
 }
